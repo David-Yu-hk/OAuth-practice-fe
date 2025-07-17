@@ -10,7 +10,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div style={{ textAlign: "center" }}>
             <h2>Welcome to the OAuth Demo</h2>
             <button onClick={googleLogin}>Login with Google</button>
             <button onClick={githubLogin}>Login with GitHub</button>
