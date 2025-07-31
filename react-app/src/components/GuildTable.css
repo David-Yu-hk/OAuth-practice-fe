@@ -5,20 +5,23 @@
 
 .hover-label {
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  left: 100%;               /* ✅ Shift to right side */
+  transform: translateY(-50%);
+  margin-left: 8px;         /* Adds spacing between icon and label */
   background-color: #333;
   color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
   white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 0;               /* 🔒 Hidden by default */
+  visibility: hidden;       /* Removes from layout when hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   pointer-events: none;
   z-index: 10;
 }
 
 .icon-container:hover .hover-label {
-  opacity: 1;
+  opacity: 1;               /* 👀 Fade in on hover */
+  visibility: visible;
 }
